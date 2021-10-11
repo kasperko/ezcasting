@@ -1,0 +1,203 @@
+<h5>Edit Profile</h5>
+<h3>{{user.displayName}}</h3>
+<img src="{{user.image}}" alt="">
+<div class="row">
+  <form action="/profile" method="POST" class="col s12">
+    <input type="hidden" name="_method" value="PUT">
+    <div class="row">
+      <div class="input-field">
+        <label for="gender">Gender: {{user.gender}}</label>
+        <select id="gender" name="gender">
+          {{#select user.gender}}
+          <option value="male">Male</option>
+          <option value="female">Female</option>
+          <option value="nonBinary">Non-Binary</option>
+          {{/select}}
+        </select>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="input-field">
+        <label for="transgender">Transgender</label>
+        <input type="checkbox" id="transgender" name="transgender" value="{{user.transgender}}">
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="input-field">
+        <label for="ageFrom">Portrayable Age Range</label>
+        <input type="number" id="ageFrom" name="ageFrom" value="{{user.ageFrom}}">
+        <label for="ageTo">to</label>
+        <input type="number" id="ageTo" name="ageTo" value="{{user.ageTo}}">
+      </div>
+    </div>
+    
+    <div class="row">
+      <div class="input-field">
+        <label>Portrayable Ethnicities (choose all that apply)</label>
+          <label for="ambiguous">Ambiguous</label>
+          <input type="checkbox" id="ambiguous" name="ambiguous" value="{{user.ethnicity[0]}}">
+          <label for="asian">Asian</label>
+          <input type="checkbox" id="asian" name="asian" value="{{user.ethnicity[1]}}">
+          <label for="black">Black</label>
+          <input type="checkbox" id="black" name="black" value="{{user.ethnicity[2]}}">
+          <label for="eastIndian">East Indian</label>
+          <input type="checkbox" id="eastIndian" name="eastIndian" value="{{user.ethnicity[3]}}">     
+          <label for="latinxHispanic">Latinx/Hispanic</label>
+          <input type="checkbox" id="latinxHispanic" name="latinxHispanic" value="{{user.ethnicity[4]}}">
+          <label for="middleEastern">Middle Eastern</label>
+          <input type="checkbox" id="middleEastern" name="middleEastern" value="{{user.ethnicity[5]}}">     
+          <label for="multiEthnic">Multi-Ethnic</label>
+          <input type="checkbox" id="multiEthnic" name="multiEthnic" value="{{user.ethnicity[6]}}">
+          <label for="nativeAmerican">Native American</label>
+          <input type="checkbox" id="nativeAmerican" name="nativeAmerican" value="{{user.ethnicity[7]}}">     
+          <label for="pacificIslander">Pacific Islander</label>
+          <input type="checkbox" id="pacificIslander" name="pacificIslander" value="{{user.ethnicity[8]}}">
+          <label for="white">White</label>
+          <input type="checkbox" id="white" name="white" value="{{user.ethnicity[9]}}">                                                                                           
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="input-field">
+        <input type="number" id="height" name="height" min="0" max="100" value="{{user.height}}">
+        <label for="height">Height (in inches): {{user.height}}</label>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="input-field">
+        <input type="number" id="weight" name="weight" min="0" max="1000" value="{{user.weight}}">
+        <label for="weight">Weight (in lbs): {{user.weight}}</label>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="input-field">
+        <input type="number" id="weight" name="weight" min="0" max="1000" value="{{user.weight}}">
+        <label for="weight">Weight (in lbs): {{user.weight}}</label>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="input-field">
+        <input type="number" id="weight" name="weight" min="0" max="1000" value="{{user.weight}}">
+        <label for="weight">Weight (in lbs): {{user.weight}}</label>
+      </div>
+    </div>
+    
+    <div class="row">
+      <div class="input-field">
+        <input type="number" id="weight" name="weight" min="0" max="1000" value="{{user.weight}}">
+        <label for="weight">Weight (in lbs): {{user.weight}}</label>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="input-field">
+        <label for="unionStatus">Union Status: {{user.unionStatus}}</label>
+        <select id="unionStatus" name="unionStatus">
+          {{#select user.unionStatus}}
+          <option value="sag">SAG</option>
+          <option value="nonUnion">Non-Union</option>
+          {{/select}}
+        </select>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="input-field">
+        <input type="number" id="jacket" name="jacket" value="{{user.jacket}}">
+        <label for="jacket">Jacket: {{user.jacket}}</label>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="input-field">
+        <input type="number" id="sleeve" name="sleeve" value="{{user.sleeve}}">
+        <label for="sleeve">Sleeve: {{user.sleeve}}</label>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="input-field">
+        <input type="number" id="neck" name="neck" value="{{user.neck}}">
+        <label for="neck">Neck: {{user.neck}}</label>
+      </div>
+    </div>
+
+
+    <div class="row">
+      <div class="input-field">
+        <input type="number" id="waist" name="waist" value="{{user.waist}}">
+        <label for="waist">Waist: {{user.waist}}</label>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="input-field">
+        <input type="number" id="inseam" name="inseam" value="{{user.inseam}}">
+        <label for="inseam">Inseam: {{user.inseam}}</label>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="input-field">
+        <input type="number" id="shoes" name="shoes" value="{{user.shoes}}">
+        <label for="shoes">Shoes: {{user.shoes}}</label>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="input-field">
+        <input type="number" id="dress" name="dress" value="{{user.dress}}">
+        <label for="dress">Dress: {{user.dress}}</label>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="input-field">
+        <input type="number" id="bust" name="bust" value="{{user.bust}}">
+        <label for="bust">Bust: {{user.bust}}</label>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="input-field">
+        <label for="cupSize">Cup Size: {{user.cupSize}}</label>
+        <select id="cupSize" name="cupSize">
+          {{#select user.cupSize}}
+          <option value="AA">AA</option>
+          <option value="A">A</option>
+          <option value="B">B</option>
+          <option value="c">C</option>
+          <option value="D">D</option>
+          <option value="DD/E">DD/E</option>
+          <option value="DDD/F">DDD/F</option>
+          <option value="G">G</option>
+          {{/select}}
+        </select>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="input-field">
+        <input type="number" id="hips" name="hips" value="{{user.hips}}">
+        <label for="hips">Hips: {{user.hips}}</label>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="input-field">
+        <input type="text" id="phoneNumber" name="phoneNumber" value="{{user.phoneNumber}}">
+        <label for="phoneNumber">Phone Number: {{user.phoneNumber}}</label>
+      </div>
+    </div>
+
+    <div class="row">
+      <input type="submit" value="Save" class="btn">
+      <a href="/profile" class="btn orange">Cancel</a>
+    </div>
+  </form>
+</div>

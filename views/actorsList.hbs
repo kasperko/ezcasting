@@ -1,0 +1,21 @@
+<h3>Background Actors</h3>
+
+{{!- Filter -}}
+
+<div class="row">
+  {{#each users}}
+    <div class="col s12 m4">
+      <div class="card">
+        <div class="card-content center-align">
+          <h6>{{displayName}}</h6>
+          <img src="{{image}}" alt="">
+          <p>{{unionStatus}}</p>
+          <p>{{height}} {{weight}}</p>
+          <p>{{phoneNumber}}</p>
+        </div>
+      </div>
+    </div>
+  {{else}}
+    <p>No actors have joined us yet</p>
+  {{/each}}
+</div>
